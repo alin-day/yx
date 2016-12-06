@@ -1,0 +1,36 @@
+/*
+* dependencies.gradle文件配置主要包括几方面
+* 1. android编译相关;
+* 2. module使用到的library;
+* 3. testing配置;
+* 4. dependencies配置相关;
+*/
+
+ext {
+  //项目中公共配置项可在这里设定
+
+  //Android configuration
+  androidBuildToolsVersion = "24.0.0"
+  androidCompileSdkVersion = 24
+  androidMinSdkVersion = 15
+  androidTargetSdkVersion = 24
+
+  //libraries
+  //例子:
+  //daggerVersion = '2.0.2'
+  //butterKnifeVersion = '7.0.1'
+
+  //Testing
+  //例子:
+  //jUnitVersion = '4.12'
+  //assertJVersion = '1.7.1'
+  //mockitoVersion = '1.9.5'
+
+  //module dependencies configuration
+  //例子:
+  //presentationDependencies = [
+  //daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerVersion}",
+  //dagger:             "com.google.dagger:dagger:${daggerVersion}",
+  // ]
+}
+

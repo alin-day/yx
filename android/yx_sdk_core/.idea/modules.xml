@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/yx_sdk_core.iml" filepath="$PROJECT_DIR$/yx_sdk_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yx_sdk_core_m/yx_sdk_core_m.iml" filepath="$PROJECT_DIR$/yx_sdk_core_m/yx_sdk_core_m.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yx_sdk_core_s/yx_sdk_core_s.iml" filepath="$PROJECT_DIR$/yx_sdk_core_s/yx_sdk_core_s.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yx_sdk_libs/yx_sdk_libs.iml" filepath="$PROJECT_DIR$/yx_sdk_libs/yx_sdk_libs.iml" />
+    </modules>
+  </component>
+</project>

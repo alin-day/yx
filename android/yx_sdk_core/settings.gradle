@@ -1,0 +1,3 @@
+include ':yx_sdk_core_s'
+include ':yx_sdk_core_m'
+include ':yx_sdk_libs'

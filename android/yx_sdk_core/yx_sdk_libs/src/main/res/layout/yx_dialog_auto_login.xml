@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_switch_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/fg_pop_change"
+        android:textColor="@color/white"
+        android:textSize="@dimen/kefu_title"
+        android:shadowRadius="1"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="290dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/yx_bg_kefu_dialog_simple"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_auto_login_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18664830057"
+                android:textColor="@color/dialog_title_text"
+                android:textSize="21sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yx_auto_login_tip"
+                android:textColor="@color/kefu_gray"
+                android:textSize="21sp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/waiting"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="30dip"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/yx_kefu_progress"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>

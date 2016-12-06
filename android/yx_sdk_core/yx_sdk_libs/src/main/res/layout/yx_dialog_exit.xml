@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="240dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/yx_img_exit_res"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layout_exit_btns"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:id="@+id/layout_exit_btns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/yx_btn_exit_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/yx_btn_exit"
+                android:text="@string/fg_exit_game"
+                android:textColor="@color/yx_text_color_findpass"
+                android:textSize="21sp" />
+
+            <Button
+                android:id="@+id/yx_btn_continue_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/yx_btn_exit"
+                android:text="@string/yx_continue_game"
+                android:textColor="@color/yx_text_color_findpass"
+                android:textSize="21sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

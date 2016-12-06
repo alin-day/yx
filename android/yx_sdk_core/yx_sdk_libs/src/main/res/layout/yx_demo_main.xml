@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/loginBtn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Login(登录)" />
+
+                <Button
+                    android:id="@+id/changeAccountBtn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/loginBtn"
+                    android:text="ChangeAccount(切换帐号)" />
+
+                <Button
+                    android:id="@+id/payBtn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/changeAccountBtn"
+                    android:text="Pay(定额)" />
+
+                <Button
+                    android:id="@+id/payBtn2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/payBtn"
+                    android:layout_below="@+id/payBtn"
+                    android:text="Pay(不定额)" />
+
+                <Button
+                    android:id="@+id/showExit"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/submitStatisticsInfo"
+                    android:layout_below="@+id/submitStatisticsInfo"
+                    android:text="showExitDailog(退出游戏对话框)" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/creatRoleBtn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/submitDataBtn"
+                    android:layout_below="@+id/payBtn2"
+                    android:text="creatRoleInfo(创建角色-提交信息)" />
+
+                <Button
+                    android:id="@+id/submitDataBtn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/payBtn2"
+                    android:layout_below="@+id/payBtn2"
+                    android:text="submitRoleInfo(角色进服-提交信息)" />
+
+                <Button
+                    android:id="@+id/upgradeDataBtn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/payBtn2"
+                    android:layout_below="@+id/payBtn2"
+                    android:text="upgradeRoleInfo(角色升级-提交信息)" />
+
+                <Button
+                    android:id="@+id/getappconfigBtn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/logoutBtn"
+                    android:layout_below="@+id/logoutBtn"
+                    android:text="getConfig(获取配置)" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

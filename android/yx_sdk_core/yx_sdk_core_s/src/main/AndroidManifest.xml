@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.yxyige.sdk.s">
+
+    <!--&lt;!&ndash; 支付宝 权限 start &ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.INTERNET" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <!--&lt;!&ndash; 支付宝 权限 end &ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />-->
+    <!--<uses-permission android:name="android.permission.GET_TASKS" />-->
+    <!--&lt;!&ndash;  V2.1新增，用于短信注册帐号 &ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.SEND_SMS" />-->
+
+    <!--<application-->
+    <!--android:allowBackup="true"-->
+    <!--android:icon="@drawable/yx_ic_launcher"-->
+    <!--android:label="YX_S_1.0.1">-->
+    <!--<activity-->
+    <!--android:configChanges="orientation|keyboardHidden|screenSize"-->
+    <!--android:name="com.yxyige.sdk.demo.MainActivity"-->
+    <!--android:screenOrientation="landscape"-->
+    <!--android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">-->
+    <!--<intent-filter>-->
+    <!--<action android:name="android.intent.action.MAIN" />-->
+    <!--<category android:name="android.intent.category.LAUNCHER" />-->
+    <!--</intent-filter>-->
+    <!--</activity>-->
+
+    <!--<activity-->
+    <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
+    <!--android:name="com.yxyige.sdk.activity.GameWebActivity"-->
+    <!--android:screenOrientation="behind"-->
+    <!--android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"-->
+    <!--android:windowSoftInputMode="stateVisible|adjustResize" />-->
+
+    <!--<receiver android:name="com.yxyige.sdk.receiver.DownloadReceiver">-->
+    <!--<intent-filter android:priority="9000">-->
+    <!--<action android:name="android.intent.action.DOWNLOAD_COMPLETE" />-->
+    <!--<action android:name="android.niuniu.down.query" />-->
+    <!--</intent-filter>-->
+    <!--</receiver>-->
+
+    <!--&lt;!&ndash; 银联 &ndash;&gt;-->
+    <!--<activity-->
+    <!--android:configChanges="orientation|keyboardHidden|screenSize|screenLayout"-->
+    <!--android:name="com.yxyige.sdk.activity.GamePayActivity"-->
+    <!--android:theme="@style/Theme.Transparent" />-->
+    <!--&lt;!&ndash; 支付宝 &ndash;&gt;-->
+    <!--<activity-->
+    <!--android:configChanges="orientation|keyboardHidden|navigation"-->
+    <!--android:exported="false"-->
+    <!--android:name="com.alipay.sdk.app.H5PayActivity"-->
+    <!--android:screenOrientation="behind"-->
+    <!--android:windowSoftInputMode="adjustResize|stateHidden" />-->
+
+    <!--</application>-->
+
+</manifest>

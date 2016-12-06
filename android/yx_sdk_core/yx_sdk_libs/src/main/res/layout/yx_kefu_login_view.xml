@@ -1,0 +1,248 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="290dp"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/tips_login_reg_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="2dp">
+
+        <Button
+            android:id="@+id/tips_login_back_btn"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/yx_kefu_reg"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@color/s_white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tips_login_reg_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/yx_login_title"
+            android:textColor="@color/dialog_title_text"
+            android:textSize="23sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tips_login_reg_view_layout"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/loginInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/yx_bg_edit"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/text_flag_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dip"
+                    android:text="@string/fg_account"
+                    android:textColor="@color/s_gray"
+                    android:textSize="18.0sp" />
+
+                <EditText
+                    android:id="@+id/loginName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/fg_en_account_hint"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="@color/s_light_gray"
+                    android:textColorHint="@color/s_light_gray"
+                    android:textSize="18.0sp">
+
+                    <requestFocus />
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/fg_select_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/yx_bg_account_right_flag"
+                    android:scaleType="center"
+                    android:src="@drawable/yx_user_set_down_bg_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/yx_bg_edit"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:padding="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dip"
+                    android:text="@string/fg_pw"
+                    android:textColor="@color/s_gray"
+                    android:textSize="18.0sp" />
+
+                <EditText
+                    android:id="@+id/loginPW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/fg_en_pw_hint"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="@color/s_light_gray"
+                    android:textColorHint="@color/s_light_gray"
+                    android:textSize="18.0sp" />
+
+                <ImageView
+                    android:id="@+id/fg_pwd_login_eye"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/yx_bg_account_right_flag"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:scaleType="center"
+                    android:src="@drawable/yx_user_pwd_eye_open" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/forget_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/loginInfo"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/yx_ic_key"
+            android:text="@string/yx_find_pwd"
+            android:textColor="@color/s_gray"
+            android:textSize="18.0sp" />
+
+        <LinearLayout
+            android:id="@+id/btnLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/forget_pwd"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/toReg"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:background="@drawable/yx_btn_blue"
+                android:text="@string/fg_reg_account"
+                android:textColor="@color/s_white"
+                android:textSize="21.0sp" />
+
+            <Button
+                android:id="@+id/toLogin"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1"
+                android:background="@drawable/yx_btn_orange"
+                android:text="@string/fg_login_btn"
+                android:textColor="@color/s_white"
+                android:textSize="21.0sp" />
+        </LinearLayout>
+
+        <com.yxyige.sdk.widget.MarqueeTextView
+            android:id="@+id/downInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnLayout"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/yx_notice_down_tips"
+            android:drawablePadding="10dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingRight="5dip"
+            android:paddingTop="2dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="@string/fg_welcome"
+            android:textColor="#ff9a9a9a"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/regLayout"
+        layout="@layout/yx_kefu_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tips_login_reg_view_layout"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/regByPhoneNumLayout"
+        layout="@layout/yx_kefu_reg_by_phonenum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tips_login_reg_view_layout"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/resetPhonePwd"
+        layout="@layout/yx_kefu_reset_phone_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/loginLayout"
+        android:visibility="gone" />
+
+</RelativeLayout>

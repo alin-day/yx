@@ -1,0 +1,184 @@
+//定义是否是发布状态／开发状态
+def isRelease = false
+
+if (isRelease) {
+    apply plugin: 'com.android.library'
+} else {
+    apply plugin: 'com.android.application'
+}
+
+//定义releaseTime
+def releaseTime() {
+    return new Date().format("yyyy_MM_dd", TimeZone.getTimeZone("UTC"))
+}
+
+//定义appName,打包时候替换
+def appName() {
+    return "YX_SDK_Demo_M"
+}
+
+android {
+
+    compileSdkVersion rootProject.ext.androidCompileSdkVersion
+    buildToolsVersion rootProject.ext.androidBuildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.androidMinSdkVersion
+        targetSdkVersion rootProject.ext.androidTargetSdkVersion
+
+        //android 6.0(api 23) SDK以及以上，不再提供org.apache.http.*(只保留几个类).
+        useLibrary 'org.apache.http.legacy'
+
+        //包名
+        if (!isRelease) {
+            applicationId "com.yxyige.sdk.m"
+        }
+        //sdk版本设定
+        versionCode 2
+        versionName "1.1.0"
+    }
+
+    //工程目录结构配置
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            resources.srcDirs = ['src/main/resources']
+            aidl.srcDirs = ['src/main/aidl']
+            renderscript.srcDirs = ['src/maom']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+            jniLibs.srcDir 'src/main/jniLibs'
+        }
+    }
+
+    lintOptions {
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+        disable 'InvalidPackage' //Some libraries have issues with this.
+        disable 'OldTargetApi' //Lint gives this warning but SDK 20 would be Android L Beta.
+        disable 'IconDensities' //For testing purpose. This is safe to remove.
+        disable 'IconMissingDensityFolder' //For testing purpose. This is safe to remove.
+    }
+
+    compileOptions {
+        encoding "UTF-8"
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+
+    signingConfigs {
+        release {
+            File propFile = file('../BuildSystem/signing.properties');
+            if (propFile.exists()) {
+                def Properties props = new Properties()
+                props.load(new FileInputStream(propFile))
+                if (props.containsKey('STORE_FILE') && props.containsKey('STORE_PASSWORD') &&
+                        props.containsKey('KEY_ALIAS') &&
+                        props.containsKey('KEY_PASSWORD')) {
+                    storeFile file(props['STORE_FILE'])
+                    storePassword props['STORE_PASSWORD']
+                    keyAlias props['KEY_ALIAS']
+                    keyPassword props['KEY_PASSWORD']
+                }
+            }
+        }
+
+        debug {
+            //debug 版本签名使用android默认
+        }
+    }
+
+    buildTypes {
+        release {
+            //执行proguard混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules-yx-sdk-m-v1.0.1.pro'
+            //签名
+            signingConfig signingConfigs.release
+        }
+        debug {
+            //不执行proguard
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules_37sdk_release.pro'
+            //签名
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    //-----------------------------------------
+    //打包后文件名称的修改
+    //library时也要注释掉
+    //-----------------------------------------
+    //打包后应用名称
+    //appName_versionName_releaseTime_productFlavors.apk
+    if (!isRelease) {
+        applicationVariants.all { variant ->
+            variant.outputs.each { output ->
+                def outputFile = output.outputFile
+                if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                    def fileName = "${appName()}_v${defaultConfig.versionName}_${releaseTime()}_" + "${variant.productFlavors[0].name}.apk"
+                    output.outputFile = new File(outputFile.parent, fileName)
+                }
+            }
+        }
+    }
+
+    if (!isRelease) {
+        //----------------------------------------
+        //productFlavors 定义
+        //左右于多渠道打包
+        //----------------------------------------
+        productFlavors {
+            yx {}
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':yx_sdk_libs')
+    if(!isRelease){
+        compile project(':yx_sdk_core_s')
+    }
+}
+
+if (isRelease) {
+    // Task to delete old jar
+    task deleteOldJar(type: Delete) {
+        delete 'build/libs/yx_sdk_core_m_1.1.0.jar'
+    }
+
+// task to export contents as jar
+    task exportJar(type: Copy) {
+        from('build/intermediates/bundles/release/')
+        into('build/libs/')
+        include('classes.jar')
+        rename('classes.jar', 'yx_sdk_core_m_1.1.0.jar')
+    }
+    exportJar.dependsOn(deleteOldJar, assemble)
+}

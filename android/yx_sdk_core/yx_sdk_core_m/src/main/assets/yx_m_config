@@ -1,0 +1,15 @@
+
+#是否开启debug模式
+debug=0
+
+#平台编号，平台代码，等同ptid
+usesdk=1
+
+#是否开启推送延时，0==不启动，1==启动
+isPushDelay=1
+
+#使用优象平台／联运平台退出框， 0==不使用，1==使用
+usePlatformExit=1
+
+#是否显示37闪屏，0==不显示，1==显示
+isSplashShow=0

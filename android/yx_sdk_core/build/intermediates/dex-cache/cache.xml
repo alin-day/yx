@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/yangchenglin/Desktop/code/ck/yx_sdk_core/yx_sdk_core_m/build/intermediates/exploded-aar/yx_sdk_core/yx_sdk_libs/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="b6a00f299b67d6fb3fed1448d0673a3de0fb0d47">
+        <dex dex="/Users/yangchenglin/Desktop/code/ck/yx_sdk_core/yx_sdk_core_m/build/intermediates/pre-dexed/yx/debug/yx_sdk_core-yx_sdk_libs-unspecified_5318c32e285e2aaa5c65fcefc46a6dbe2c2d2b90.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yangchenglin/Desktop/code/ck/yx_sdk_core/yx_sdk_core_m/build/intermediates/exploded-aar/yx_sdk_core/yx_sdk_core_s/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="0ed0a27384f90fe826ac9a2a14c30f98a98c62dc">
+        <dex dex="/Users/yangchenglin/Desktop/code/ck/yx_sdk_core/yx_sdk_core_m/build/intermediates/pre-dexed/yx/debug/yx_sdk_core-yx_sdk_core_s-unspecified_1f3c04f1288031a8d4453531f001d58a0ae530a0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yangchenglin/Desktop/code/ck/yx_sdk_core/yx_sdk_core_m/build/intermediates/exploded-aar/yx_sdk_core/yx_sdk_libs/unspecified/jars/libs/alipaySdk-20151112.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="61324251335871c3021ce97033d38597f4c92430">
+        <dex dex="/Users/yangchenglin/Desktop/code/ck/yx_sdk_core/yx_sdk_core_m/build/intermediates/pre-dexed/yx/debug/alipaySdk-20151112_43135d1b886b2e5c998d75ac329be799e583da8d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yangchenglin/Desktop/code/ck/yx_sdk_core/yx_sdk_core_m/build/intermediates/exploded-aar/yx_sdk_core/yx_sdk_libs/unspecified/jars/libs/wftsdk2.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="ed9f3aaa77a70e1414fc39980e7fd9e98820bc6d">
+        <dex dex="/Users/yangchenglin/Desktop/code/ck/yx_sdk_core/yx_sdk_core_m/build/intermediates/pre-dexed/yx/debug/wftsdk2.1.1_e054b4ff32d0ce9ae18c8e0e1571f2ce73a1ae2c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yangchenglin/Desktop/code/ck/yx_sdk_core/yx_sdk_core_m/build/intermediates/exploded-aar/yx_sdk_core/yx_sdk_libs/unspecified/jars/libs/UPPayAssistEx.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="f15b9441eb925ad06f1063c6b4b019762695cb62">
+        <dex dex="/Users/yangchenglin/Desktop/code/ck/yx_sdk_core/yx_sdk_core_m/build/intermediates/pre-dexed/yx/debug/UPPayAssistEx_454bb7f9861cffe6b2cb0b22f7620c4b8bb9c9aa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yangchenglin/Desktop/code/ck/yx_sdk_core/yx_sdk_core_m/build/intermediates/exploded-aar/yx_sdk_core/yx_sdk_libs/unspecified/jars/libs/gson-2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="d7da55c2675973ef50283d74fe44736ba43cd0ec">
+        <dex dex="/Users/yangchenglin/Desktop/code/ck/yx_sdk_core/yx_sdk_core_m/build/intermediates/pre-dexed/yx/debug/gson-2.1_183e158b4f61db6dce002bfe5fec84c37303e4f0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yangchenglin/Desktop/code/ck/yx_sdk_core/yx_sdk_core_m/build/intermediates/exploded-aar/yx_sdk_core/yx_sdk_libs/unspecified/jars/libs/android-support-v4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.0"
+        sha1="e1011b1282908db745a6bce3f2f99c82bffab021">
+        <dex dex="/Users/yangchenglin/Desktop/code/ck/yx_sdk_core/yx_sdk_core_m/build/intermediates/pre-dexed/yx/debug/android-support-v4_2e66a4f33167e2a0929ba24784ffb7f004ffaace.jar" />
+    </item>
+
+</items>

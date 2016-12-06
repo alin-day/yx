@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/regLayout"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:id="@+id/regInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TableRow
+            android:layout_weight="1.0"
+            android:background="@drawable/yx_bg_edit"
+            android:gravity="bottom"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/text_flag_account"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dip"
+                android:text="@string/fg_account"
+                android:textColor="@color/s_gray"
+                android:textSize="18.0sp" />
+
+            <EditText
+                android:id="@+id/regName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/yx_reg_account_hint"
+                android:inputType="textEmailAddress|text"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="@color/s_light_gray"
+                android:textColorHint="@color/s_light_gray"
+                android:textSize="14.0sp">
+
+                <requestFocus />
+            </EditText>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/yx_bg_edit"
+            android:gravity="top"
+            android:padding="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dip"
+                android:text="@string/fg_pw"
+                android:textColor="@color/s_gray"
+                android:textSize="18.0sp" />
+
+            <EditText
+                android:id="@+id/regPW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/yx_reg_pw_hint"
+                android:inputType="text"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="@color/s_light_gray"
+                android:textColorHint="@color/s_light_gray"
+                android:textSize="14.0sp" />
+
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/yx_reg_clause_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/regInfo"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/yx_reg_clause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/yx_check_selector"
+            android:checked="true"
+            android:text="@string/yx_reg_clause_tips_1"
+            android:textColor="#696969" />
+
+
+        <TextView
+            android:id="@+id/yx_reg_clause_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yx_reg_clause_tips_2"
+            android:textColor="#696969"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/regBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_alignLeft="@id/regInfo"
+        android:layout_alignRight="@id/regInfo"
+        android:layout_below="@id/yx_reg_clause_view"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/yx_btn_blue"
+        android:text="@string/fg_reg_account_now"
+        android:textColor="@color/s_white"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/yx_reg_text_has_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:drawableLeft="@drawable/yx_ic_account"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="@string/fg_reg_has_account"
+        android:textColor="@color/yx_text_reg_selector"
+        android:textSize="21sp" />
+
+    <TextView
+        android:id="@+id/yx_reg_text_by_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@drawable/yx_ic_phone"
+        android:drawablePadding="5dp"
+        android:text="@string/fg_reg_by_phone"
+        android:textColor="@color/yx_text_reg_selector"
+        android:textSize="21sp" />
+
+</RelativeLayout>
